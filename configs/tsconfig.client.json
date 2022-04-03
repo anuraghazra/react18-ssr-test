@@ -1,0 +1,14 @@
+{
+  "include": ["../client"],
+  "compilerOptions": {
+    "module": "es2020", // generate ES modules
+    "target": "es5", // target ES5 API
+    "jsx": "react", // compile JSX to React.createElement statements for browser
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true
+  }
+}
