@@ -1,3 +1,3 @@
-## React 18 From Scratch
+## React 18 SSR From Scratch
 
-Minimal react 18 setup for experimentation.
+Minimal react 18 server side rendering setup for experimentation.
