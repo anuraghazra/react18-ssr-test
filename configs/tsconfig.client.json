@@ -1,9 +1,10 @@
 {
-  "include": ["../client"],
+  "include": ["../client", "../@types/*.d.ts"],
   "compilerOptions": {
+    "moduleResolution": "node",
     "module": "es2020", // generate ES modules
     "target": "es5", // target ES5 API
-    "jsx": "react", // compile JSX to React.createElement statements for browser
+    "jsx": "react-jsx", // compile JSX to React.createElement statements for browser
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,

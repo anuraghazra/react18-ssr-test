@@ -1,18 +1,30 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense } from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import routes from "../routes";
 
-const Hello = React.lazy(() => import("./Hello"));
-
-export const App: React.FC = () => {
-  const [count, setCount] = useState(0);
-
+const App: React.FC = () => {
   return (
-    <>
-      <h1>Hello World!!!</h1>
+    <div>
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <br />
+      <br />
       <Suspense fallback="loading..">
-        <Hello />
+        <Routes>
+          {routes.map((route) => {
+            return (
+              <Route
+                key={route.path}
+                {...route}
+                path={route.path}
+                element={route.component}
+              />
+            );
+          })}
+        </Routes>
       </Suspense>
-      <button onClick={() => setCount(count + 1)}>click</button>
-      <h2>{count}</h2>
-    </>
+    </div>
   );
 };
+
+export default App;

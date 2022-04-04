@@ -5,7 +5,7 @@ const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 module.exports = {
   name: "client",
   entry: {
-    client: path.resolve(process.cwd(), "client/src/index.tsx"),
+    client: path.resolve(process.cwd(), "client/entry.tsx"),
   },
   mode: "production",
   output: {
@@ -32,5 +32,8 @@ module.exports = {
       },
     ],
   },
-  plugins: [new CleanWebpackPlugin(), new WebpackManifestPlugin()],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new WebpackManifestPlugin(),
+  ],
 };
