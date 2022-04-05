@@ -1,12 +1,16 @@
 import React, { Suspense } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import routes from "../routes";
+import useLagRadar from "../useLagRadar";
 
 const App: React.FC = () => {
+  useLagRadar();
+
   return (
     <div>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
+      <Link to="/with-transition">With transition</Link>
+      <br />
+      <Link to="/without-transition">Without transition</Link>
       <br />
       <br />
       <Suspense fallback="loading..">

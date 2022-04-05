@@ -3,6 +3,7 @@ import { Writable } from "stream";
 
 declare module "react" {
   function useId(): string;
+  function startTransition(arg: any): any;
 }
 
 declare module "react-dom/server" {
